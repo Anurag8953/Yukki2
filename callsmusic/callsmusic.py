@@ -19,4 +19,4 @@ def on_stream_end(chat_id: int) -> None:
         pytgcalls.change_stream(chat_id, queues.get(chat_id)["file"])
 
 
-run = pytgcalls.start
+run = pytgcalls.run
