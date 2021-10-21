@@ -1,6 +1,6 @@
-pyrogram
+git+https://github.com/pyrogram/pyrogram@master
 tgcrypto
-py-tgcalls==0.5.5
+pytgcalls[pyrogram]
 python-dotenv
 youtube-search-python
 requests
@@ -10,7 +10,7 @@ asyncio
 youtube-search
 search-engine-parser
 ffmpeg-python
-pillow
+pillow==8.4.0
 future
 psutil
 wget
