@@ -22,4 +22,3 @@ print(f"[INFO]: YUI MUSIC v{__version__} STARTED !")
 
 bot.start()
 run()
-idle()
