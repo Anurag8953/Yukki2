@@ -16,6 +16,7 @@ from config import (
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""✨ **Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
+
 💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) allows you to play music on groups through the new Telegram's voice chats!**
 💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
 ❔ **To know how to use this bot, please click on the » ❓ Basic Guide button!**""",
@@ -55,6 +56,7 @@ async def cbstart(_, query: CallbackQuery):
 async def cbhelp(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""✨ **Hello !**
+
 » **Press the button below to read the explanation and see the list of available commands !**
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -111,11 +113,10 @@ async def cbadvanced(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""🏮 **Here is the advanced commands**
 
-/start (in group) - see the bot alive status
+/strt (in group) - see the bot alive status
 /reload - reload bot and refresh the admin list
-/ping - check the bot ping status
+/pinging - check the bot ping status
 /uptime - check the bot uptime status
-/id - show the group/user id & other
 
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -155,10 +156,9 @@ async def cbsudo(_, query: CallbackQuery):
         f"""🏮 **Here is the sudo commands**
 
 /leaveall - order the assistant to leave from all group
-/stats - show the bot statistic
-/rmd - remove all downloaded files
-/eval (query) - execute code
-/sh (query) - run code
+/stts - show the bot statistic
+/evl (query) - execute code
+/shl (query) - run code
 
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -172,7 +172,7 @@ async def cbowner(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""🏮 **Here is the owner commands**
 
-/stats - show the bot statistic
+/stts - show the bot statistic
 /broadcast (reply to message) - send a broadcast message from bot
 /block (user id - duration - reason) - block user for using your bot
 /unblock (user id - reason) - unblock user you blocked for using your bot
@@ -227,7 +227,7 @@ async def cbback(_, query: CallbackQuery):
                     InlineKeyboardButton("⏩ skip", callback_data="cbskip"),
                     InlineKeyboardButton("⏹ top", callback_data="cbend"),
                 ],
-                [InlineKeyboardButton("⛔ Anti cmd", callback_data="cbdelcmds")],
+                [InlineKeyboardButton("⛔ Anti CMD", callback_data="cbdelcmds")],
                 [InlineKeyboardButton("🗑 Close", callback_data="close")],
             ]
         ),
@@ -260,6 +260,7 @@ async def cbdelcmds(_, query: CallbackQuery):
 async def cbhelps(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""✨ **Hello** [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
+
 » **Press the button below to read the explanation and see the list of available commands !**
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -333,11 +334,10 @@ async def cbadven(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""🏮 **Here is the advanced commands**
 
-/start (in group) - see the bot alive status
+/strt (in group) - see the bot alive status
 /reload - reload bot and refresh the admin list
-/ping - check the bot ping status
+/pinging - check the bot ping status
 /uptime - check the bot uptime status
-/id - show the group/user id & other
 
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -377,10 +377,9 @@ async def cblab(_, query: CallbackQuery):
         f"""🏮 **Here is the sudo commands**
 
 /leaveall - order the assistant to leave from all group
-/stats - show the bot statistic
-/rmd - remove all downloaded files
-/eval (query) - execute code
-/sh (query) - run code
+/stts - show the bot statistic
+/evl (query) - execute code
+/shl (query) - run code
 
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
